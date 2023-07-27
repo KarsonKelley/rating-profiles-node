@@ -1,0 +1,48 @@
+### Get All Users
+GET http://localhost:3000/users
+
+### Get Single User
+GET http://localhost:3000/users/64c0590b1bcc99e252aa4d3e
+
+### Create User
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+  "firstName": "Karson",
+  "lastName": "Kelley",
+  "email": "karson@email.com",
+  "strength": 10,
+  "speed": 10,
+  "stamina": 10,
+  "rizz": 10,
+  "magic": 10,
+  "stealth": 10,
+  "health": 10,
+  "kd": 3.79,
+  "ratedBy": 0,
+  "rated": 0
+}
+
+### Update User
+PUT http://localhost:3000/users/64bc0fa1089b37a84d7b0d54
+Content-Type: application/json
+
+{
+  "firstName": "Karson",
+  "lastName": "Kelley",
+  "email": "karson@email.com",
+  "strength": 10,
+  "speed": 9,
+  "stamina": 10,
+  "rizz": 10,
+  "magic": 10,
+  "stealth": 10,
+  "health": 10,
+  "kd": 3.79,
+  "ratedBy": 0,
+  "rated": 0
+}
+
+### Delete User
+DELETE http://localhost:3000/users/64c0590b1bcc99e252aa4d3e
