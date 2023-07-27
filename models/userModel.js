@@ -4,11 +4,11 @@ const userSchema = mongoose.Schema(
   {
       first_name: {
         type: String,
-        required: true
+        required: false
       },
       last_name: {
         type: String,
-        required: true
+        required: false
       },
       pronouns: {
         type: String,
@@ -16,58 +16,70 @@ const userSchema = mongoose.Schema(
       },
       genders: {
         type: String,
-        required: true
+        required: false
       },
       email: {
         type: String,
-        required: true
+        required: false
       },
       strength: {
         type: Number,
-        required: true
+        required: false,
+        default: 0
       },
       speed: {
         type: Number,
-        required: true
+        required: false,
+        default: 0
       },
       stamina: {
         type: Number,
-        required: true
+        required: false,
+        default: 0
       },
       rizz: {
         type: Number,
-        required: true
+        required: false,
+        default: 0
       },
       swag: {
         type: Number,
-        required: true
+        required: false,
+        default: 0
       },
       magic: {
-        type: Number
+        type: Number,
+        required: false,
+        default: 0
       },
       stealth: {
         type: Number,
-        required: true
+        required: false,
+        default: 0
       },
       health: {
         type: Number,
-        required: true
+        required: false,
+        default: 0
       },
       kd: {
         type: Number,
-        required: true
+        required: false,
+        default: 0
       },
       rated_by: {
         type: Number,
-        required: true
+        required: false,
+        default: 0
       },
       rated: {
         type: Number,
-        required: true
+        required: false,
+        default: 0
       }	
     },
     {
-      timestamps: true
+      timestamps: false
     }
 )
 
