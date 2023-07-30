@@ -1,77 +1,18 @@
-const express = require('express')
-const mongoose = require('mongoose')
-const User = require('./models/userModel')
-const app = express()
+const express = require('express');
+const mongoose = require('mongoose');
+const userRoute = require('./routes/userRoute');
+const app = express();
 require("dotenv").config();
 
 app.use(express.json())
 app.use(express.urlencoded({extended: false}))
 
+//routes
+
+app.use('/api', userRoute);
+
 app.get('/blog', function (req, res) {
   res.send('Hello blog, my name is Karson')
-})
-
-app.get('/users', async(req, res) => {
-  try {
-    const user = await User.find({});
-    res.status(200).json(user);
-  } catch (error) {
-    res.status(500).json({message: error.message})
-  }
-})
-
-app.get('/users/:id', async(req,res) => {
-  try {
-    const {id} = req.params;
-    const user = await User.findById(id);
-    res.status(200).json(users);
-  } catch (error) {
-    res.status(500).json({message: error.message})
-  }
-})
-
-
-app.post('/users', async(req, res) => {
-  try {
-    const user = await User.create(req.body)
-    res.status(200).json(user);
-
-  } catch (error) {
-    console.log(error.message);
-    res.status(500).json({message: error.message})
-  }
-})
-
-//update a product
-app.put('users/:id', async(req, res) => {
-  try{
-    const {id} = req.params;
-    const user = await User.findByIdAndUpdate(id, req.body);
-    //we cannot find any user in database
-    if(!user){
-      return res.status(404).json({message: `cannot find any user with ID ${id}`})
-    }
-    const updatedUser = await User.findById(id);
-    res.status(200).json(user);
-
-  } catch (error) {
-    res.status(500).json({message: error.message})
-  }
-})
-
-//delete a user
-app.delete('/users/:id', async(req, res) => {
-  try {
-    const {id} = req.params;
-    const user = await User.findByIdAndDelete(id);
-    if(!user){
-      return res.status(404).json({message: `cannot find any user with ID ${id}`})
-    }
-    res.status(200).json(user);
-    
-  } catch (error) {
-    res.status(500).json({message: error.message})
-  }
 })
 
 mongoose.set("strictQuery", false)
