@@ -33,7 +33,7 @@ router.post('/users', async(req, res) => {
   }
 })
 
-//update a product
+//update a user
 router.put('users/:id', async(req, res) => {
   try{
     const {id} = req.params;
