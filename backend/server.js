@@ -25,3 +25,11 @@ mongoose.connect(`mongodb+srv://${process.env.ADMIN_ID}@cluster0.pqzhos9.mongodb
 }).catch((error) => {
   console.log(error);
 })
+
+var cors = require('cors')
+
+app.use(cors()) // Use this after the variable declaration
+
+app.get('/', function(req, res){
+  res.sendFile(__dirname+'/bin/index.html'); // change the path to your index.html
+});
