@@ -1,11 +1,11 @@
 ### Get All Users
-GET http://localhost:3000/users
+GET http://localhost:3000/api/users
 
 ### Get Single User
-GET http://localhost:3000/users/64c0590b1bcc99e252aa4d3e
+GET http://localhost:3000/api/users/64c0590b1bcc99e252aa4d3e
 
 ### Create User
-POST http://localhost:3000/users
+POST http://localhost:3000/api/users
 Content-Type: application/json
 
 {
@@ -48,4 +48,4 @@ Content-Type: application/json
 }
 
 ### Delete User
-DELETE http://localhost:3000/users/64c0590b1bcc99e252aa4d3e
+DELETE http://localhost:3000/api/users/64cea1ab0ea335fe0feb06e5
