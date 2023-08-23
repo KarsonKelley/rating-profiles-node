@@ -2,16 +2,27 @@
 <html>
   <head>
   </head>
-  <body >
-    <button style=
-    "background-color: rgb(69, 187, 255);
-    cursor: pointer;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-right: 50px;
-    border-width: 1px;
-    border-radius: 4px;
-    margin: 500px;
-    font-size: 80px;">Create</button>
+  <body>
+    <form #userForm="ngForm" ngSubmit="onSubmit(userForm)">
+      <div>
+        <label>First Name: </label>
+        <input type="text" name="firstName" #firstName="ngModel"
+        [(ngModel)]="userService.selectedUser.firstName" placeholder="i.e Karson">
+      </div>
+      <div>
+        <label>Last Name: </label>
+        <input type="text" name="lastName" #lastName="ngModel"
+        [(ngModel)]="userService.selectedUser.lastName" placeholder="i.e Kelley">
+      </div>
+      <div>
+        <label>Email: </label>
+        <input type="text" name="email" #email="ngModel"
+        [(ngModel)]="userService.selectedUser.email" placeholder="i.e karson@outlook.com">
+      </div>
+      <div>
+        <button type="button" (click)="clearForm(userForm)">clear</button>
+        <button type="button" (click)="onSubmit(userForm)">submit</button>
+      </div>
+    </form>
   </body>
 </html>
