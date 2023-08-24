@@ -2,13 +2,13 @@ const mongoose = require('mongoose')
 
 const userSchema = mongoose.Schema(
   {
-      first_name: {
+      firstName: {
         type: String,
-        required: false
+        required: true
       },
-      last_name: {
+      lastName: {
         type: String,
-        required: false
+        required: true
       },
       pronouns: {
         type: String,

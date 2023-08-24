@@ -4,7 +4,7 @@ import { NgForm } from '@angular/forms';
 import { UserService } from '../../services/user.service';
 
 @Component({
-  selector: 'app-user',
+  selector: 'app-user-create',
   templateUrl: './user.component.html',
   styleUrls: ['./user.component.css'],
   providers: [UserService]

@@ -5,13 +5,15 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { UserComponent } from './components/user/user.component';
+import { UserComponent } from './components/user-create/user.component';
+import { UserDeleteComponent } from './components/user-delete/user-delete.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    UserComponent
+    UserComponent,
+    UserDeleteComponent
   ],
   imports: [
     BrowserModule,
