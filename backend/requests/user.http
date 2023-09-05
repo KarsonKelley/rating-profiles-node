@@ -2,7 +2,7 @@
 GET http://localhost:3000/api/users
 
 ### Get Single User
-GET http://localhost:3000/api/users/64c0590b1bcc99e252aa4d3e
+GET http://localhost:3000/api/users/64e6b8c5e22de0715fab8c42
 
 ### Create User
 POST http://localhost:3000/api/users
@@ -28,7 +28,7 @@ Content-Type: application/json
 }
 
 ### Update User
-PUT http://localhost:3000/users/64bc0fa1089b37a84d7b0d54
+PUT http://localhost:3000/api/users/64e6b90de22de0715fab8c46
 Content-Type: application/json
 
 {
@@ -48,4 +48,4 @@ Content-Type: application/json
 }
 
 ### Delete User
-DELETE http://localhost:3000/api/users/64cea1ab0ea335fe0feb06e5
+DELETE http://localhost:3000/api/users/64c2a9e1f16fda60497216f7

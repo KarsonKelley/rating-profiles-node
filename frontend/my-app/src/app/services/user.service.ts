@@ -28,7 +28,17 @@ export class UserService {
     return this.http.post(this.url, user)
   }
 
-  deleteUser(id: User){
-    return this.http.delete(`${this.url}/${id}`)
+  
+  getUser(user: User){
+    return this.http.get(`${this.url}/${user._id}`)
+  }
+
+  getAllUsers(){
+    return this.http.get(this.url)
+  }
+
+  updateUser(user: User){
+    return this.http.put(`${this.url}/${user._id}`,
+     Object.fromEntries(Object.entries(user).filter(([key, value]) => value !== null && value !== "")))
   }
 }

@@ -2,6 +2,7 @@ const mongoose = require('mongoose')
 
 const userSchema = mongoose.Schema(
   {
+
       firstName: {
         type: String,
         required: true
@@ -20,66 +21,66 @@ const userSchema = mongoose.Schema(
       },
       email: {
         type: String,
-        required: false
+        required: true
       },
       strength: {
         type: Number,
-        required: false,
+        required: true,
         default: 0
       },
       speed: {
         type: Number,
-        required: false,
+        required: true,
         default: 0
       },
       stamina: {
         type: Number,
-        required: false,
+        required: true,
         default: 0
       },
       rizz: {
         type: Number,
-        required: false,
+        required: true,
         default: 0
       },
       swag: {
         type: Number,
-        required: false,
+        required: true,
         default: 0
       },
       magic: {
         type: Number,
-        required: false,
+        required: true,
         default: 0
       },
       stealth: {
         type: Number,
-        required: false,
+        required: true,
         default: 0
       },
       health: {
         type: Number,
-        required: false,
+        required: true,
         default: 0
       },
       kd: {
         type: Number,
-        required: false,
+        required: true,
         default: 0
       },
       rated_by: {
         type: Number,
-        required: false,
+        required: true,
         default: 0
       },
       rated: {
         type: Number,
-        required: false,
+        required: true,
         default: 0
       }	
     },
     {
-      timestamps: false
+      timestamps: true
     }
 )
 

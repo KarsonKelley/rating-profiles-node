@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <form #userForm="ngForm" ngSubmit="onSubmit(userForm)">
+      <div>
+        <div style="margin-top: 40px;">
+          Enter info to update existing user
+        </div>
+        <div>
+          <div>
+            <div>
+              <label>User ID: </label>
+            </div>
+            <div>
+              <input type="text" name="_id" #_id="ngModel"
+              [(ngModel)]="userService.selectedUser._id">
+            </div>  
+          </div>
+          <div>
+            <div>
+              <label>Strength: </label>
+            </div>
+            <div>
+              <input type="text" name="strength" #strength="ngModel"
+              [(ngModel)]="userService.selectedUser.strength">
+            </div>  
+          </div>
+          <div>
+            <div>
+              <label>Speed: </label>
+            </div>
+            <div>
+              <input type="text" name="speed" #speed="ngModel"
+              [(ngModel)]="userService.selectedUser.speed">
+            </div>  
+          </div>
+          <div>
+            <div>
+              <label>Stamina: </label>
+            </div>
+            <div>
+              <input type="text" name="stamina" #stamina="ngModel"
+              [(ngModel)]="userService.selectedUser.stamina">
+            </div>  
+          </div>
+          <div>
+            <div>
+              <label>Rizz: </label>
+            </div>
+            <div>
+              <input type="text" name="rizz" #rizz="ngModel"
+              [(ngModel)]="userService.selectedUser.rizz">
+            </div>  
+          </div>
+          <div>
+            <div>
+              <label>Swag: </label>
+            </div>
+            <div>
+              <input type="text" name="swag" #swag="ngModel"
+              [(ngModel)]="userService.selectedUser.swag">
+            </div>  
+          </div>
+          <div>
+            <div>
+              <label>Magic: </label>
+            </div>
+            <div>
+              <input type="text" name="magic" #magic="ngModel"
+              [(ngModel)]="userService.selectedUser.magic">
+            </div>  
+          </div>
+          <div>
+            <div>
+              <label>Stealth: </label>
+            </div>
+            <div>
+              <input type="text" name="stealth" #stealth="ngModel"
+              [(ngModel)]="userService.selectedUser.stealth">
+            </div>  
+          </div>
+          <div>
+            <div>
+              <label>Health: </label>
+            </div>
+            <div>
+              <input type="text" name="health" #health="ngModel"
+              [(ngModel)]="userService.selectedUser.health">
+            </div>  
+          </div>
+          <div>
+            <div>
+              <label>K/D: </label>
+            </div>
+            <div>
+              <input type="text" name="kd" #kd="ngModel"
+              [(ngModel)]="userService.selectedUser.kd">
+            </div>  
+          </div>
+        </div>      
+        <div>
+          <button type="button" (click)="onSubmit(userForm)">submit</button>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>

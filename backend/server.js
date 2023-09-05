@@ -10,12 +10,7 @@ app.use(express.urlencoded({extended: false}))
 app.use(cors())
 
 //routes
-
 app.use('/api', userRoute);
-
-app.get('/blog', function (req, res) {
-  res.send('Hello blog, my name is Karson')
-})
 
 mongoose.set("strictQuery", false)
 mongoose.connect(`mongodb+srv://${process.env.ADMIN_ID}@cluster0.pqzhos9.mongodb.net/rating-profiles-API?retryWrites=true&w=majority`)

@@ -6,14 +6,18 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UserComponent } from './components/user-create/user.component';
-import { UserDeleteComponent } from './components/user-delete/user-delete.component';
+import { UserGetComponent } from './components/user-get/user-get.component';
+import { UserGetAllComponent } from './components/user-get-all/user-get-all.component';
+import { UpdateUserComponent } from './components/update-user/update-user.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     UserComponent,
-    UserDeleteComponent
+    UserGetComponent,
+    UserGetAllComponent,
+    UpdateUserComponent
   ],
   imports: [
     BrowserModule,

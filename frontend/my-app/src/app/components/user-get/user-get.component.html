@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <form #userForm="ngForm" ngSubmit="onSubmit(userForm)">
+      <div>
+        <label>User ID: </label>
+        <input type="text" name="_id" #_id="ngModel"
+        [(ngModel)]="userService.selectedUser._id">
+        <div>
+          <button type="button" (click)="onSubmit(userForm)">submit</button>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>
